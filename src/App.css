@@ -1,0 +1,20 @@
+.pic{
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+}
+.name{
+  font-size: 40px;
+  font-weight: bolder;
+}
+.abc{
+  gap: 12px;
+  margin-top: 20px;
+  margin-left: 70px;
+  display: flex;
+  height: 90px;
+  width: 80%;
+}
+#abc{
+  color: white;
+}

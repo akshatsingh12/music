@@ -1,0 +1,16 @@
+.xy{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    margin-left: 10px;
+    gap: 20px;
+    /* opacity: 1; */
+}
+.color{
+    margin-top: 40px;
+    background-color: rgb(52, 120, 133);
+    color: black;
+}
+.imge{
+    height: 25px;
+    width: 25px;
+}

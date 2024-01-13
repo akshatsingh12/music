@@ -1,0 +1,16 @@
+/* .pic{
+    mix-blend-mode: luminosity;
+} 
+   filter: invert(1); /* border: 2px solid black; */
+  /* vhvhvhj*/ 
+  .xy{
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr;
+    margin-left: 10px;
+    gap: 20px;
+    /* opacity: 1; */
+  }
+.imge{
+    height: 25px;
+    width: 25px;
+}
