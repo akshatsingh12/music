@@ -6,11 +6,85 @@
     /* opacity: 1; */
 }
 .color{
-    margin-top: 40px;
-    background-color: rgb(52, 120, 133);
-    color: black;
+    z-index: 2;
+    /* margin-top: 40px; */
+    background-color: #151146;
+    color: rgb(255, 255, 255);
 }
 .imge{
     height: 25px;
+    margin-top: 5px;
     width: 25px;
 }
+.text{
+    font-size: xx-large;
+    color: aliceblue;
+}
+/* .anima{
+    position: relative;
+    height: 550px;
+    width: 100%;
+    background-color: black;
+    color: rgb(0, 136, 255);
+}
+.anim{
+    position: absolute;
+    margin-top: 4rem;
+    margin-left: 18rem;
+    height: 240px;
+    width: 60%;
+    font-size: 120px;
+    animation-name: k;
+    animation-iteration-count: infinite;
+    animation-duration: 2sec;
+    animation-delay: 1s;
+}
+@keyframes k {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+.starting-animation-container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .starting-animation {
+    opacity: 0;
+    animation: fadeInWords 2s forwards;
+  }
+
+  .word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(1em);
+    animation: fadeInWord 1s forwards;
+  }
+
+  @keyframes fadeInWords {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInWord {
+    0% {
+      opacity: 0;
+      transform: translateY(1em);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

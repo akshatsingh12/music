@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './HEADER/header1'
 import Footer from './footer'
-import Middle from './middle'
+import Middle from './Welcome'
 const Home = () => {
   return (
     <>

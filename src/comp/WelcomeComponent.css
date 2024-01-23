@@ -1,0 +1,60 @@
+/* WelcomeComponent.css */
+
+.welcome-container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .welcome-animation {
+    opacity: 0;
+    animation: fadeInWords 4s forwards;
+    white-space: nowrap;
+  }
+  
+  .word {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInWord 1s forwards;
+    font-size: 100px;
+  }
+  
+  @keyframes fadeInWords {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInWord {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* Delay the start of each word animation */
+  .word:nth-child(2) {
+    animation-delay: 0.5s; /* Adjusted to add space */
+  }
+  
+  .word:nth-child(3) {
+    animation-delay: 1s; /* Adjusted to add space */
+  }
+  
+  .word:nth-child(4) {
+    animation-delay: 1.5s; /* Adjusted to add space */
+  }
+  
+  /* Add a smooth transition effect when changing the 'show' class */
+  .welcome-animation.show {
+    transition: opacity 1s ease-in-out;
+  }
+  

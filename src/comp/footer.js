@@ -2,13 +2,13 @@ import React from 'react'
 import './music.css'
 const Footer = () => {
   return (
-   <div className='color'>
+   <div>
    <footer className="text-gray-600 body-font color">
    <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
      <div className="w-84 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
        <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
          <img src='https://penji.co/wp-content/uploads/2022/02/2.-kion.jpg' className='imge'/> 
-         <span className="ml-2 text-xl">Music Portal</span>
+         <span className="ml-2 text">Music Portal</span>
        </a>
        <p className="mt-2 text-sm text-black-500">We are the best music portal of the world.</p>
      </div>

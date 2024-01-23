@@ -1,31 +1,38 @@
 import React, { useEffect, useState } from "react";
+import LoadingBar from 'top-loading-bar/dist'
+
 import { Button ,Card} from "react-bootstrap";
 import Header from "./HEADER/header1";
 import Footer from "./footer";
+import { useParams } from "react-router-dom";
+const Songs = () => {
+  const [progress, setProgress] = useState(0)
+    const {id} = useParams();
+    const [sa , setSa] = useState([]);
+    useEffect(()=>{
 
-const Songs = (props) => {
-  const [sa,setSa] = useState([]);
-  useEffect(()=>{
-     let url=props.title
-
-    var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-var requestOptions = {
-    method: "get",
-    headers: myHeaders,
-    redirect: "follow",
-    
-};
-console.log(url);
-// fetch(url, requestOptions)
-//     .then(response => response.json())
-//     .then(result => setSa(result))
-//     .catch(error => console.log('error', error));
-//     // setSa({ })})
-  return (
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      var requestOptions = {
+        method: "get",
+        headers: myHeaders,
+        redirect: "follow",
+      };setProgress(progress + 20)
+      fetch(`https://v1.nocodeapi.com/bchbebd/spotify/ucEqkvLwySFvnehk/browse/categoryPlaylist?category_id=${id}`,requestOptions)
+      .then(response => response.json() ).then(setProgress(50))
+      .then(result => setSa(result))
+      .then(setProgress(100))
+      .catch(error => console.log('error', error))
+    },[])
+      return (
     <>
         <Header/>
-        {/* <div className="xy z-10">
+        <LoadingBar
+        color='lightgreen'
+        progress={progress}
+        onLoaderFinished={() => setProgress(0)}
+      />
+        <div className="xy z-10">
           {sa.playlists && sa.playlists.items.length > 0 ? (
             sa.playlists.items.map((sa)=>(
               <Card style={{ width: '18rem', border: "2px solid black"}}>
@@ -42,10 +49,10 @@ console.log(url);
           ):(
             <p style={{color: 'white'}}>Wait....</p>
           )}
-        </div> */}
+        </div>
         <Footer/>
     </>
   )
-})}
+}
 
 export default Songs;
