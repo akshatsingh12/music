@@ -10,7 +10,6 @@ const Songs = () => {
     const {id} = useParams();
     const [sa , setSa] = useState([]);
     useEffect(()=>{
-
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       var requestOptions = {
@@ -42,7 +41,7 @@ const Songs = () => {
         <Card.Text>
          {sa.description}
         </Card.Text>
-        <Button variant="primary" style={{backgroundColor: "blue"}}><a target="_blank" href={sa.external_urls.spotify}>Goooooooooo</a></Button>
+        <Button variant="primary" style={{backgroundColor: "blue"}}><a target="_blank" rel="noreferrer" href={sa.external_urls.spotify}>Goooooooooo</a></Button>
       </Card.Body>
     </Card>
             ))

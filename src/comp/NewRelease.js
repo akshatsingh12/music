@@ -28,9 +28,9 @@ fetch("https://v1.nocodeapi.com/bchbebd/spotify/ucEqkvLwySFvnehk/browse/new", re
           {aa.albums && aa.albums.items.length > 0 ? (
             aa.albums.items.map((aa)=>(
               <Card style={{ width: '18rem', border: "2px solid black"}}>
-      {/* <Card.Img variant="top" href={aa.artists} style={{border: "3px solid black"}}/> */}
+      <Card.Img variant="top" src={aa.images[0].url} style={{border: "3px solid black"}}/>
       <Card.Body>
-        <Card.Title>{aa.artists.name}</Card.Title>
+        <Card.Title>{aa.name}</Card.Title>
         <Card.Text>
          {/* {aa.artists[0].id} */}
         </Card.Text>

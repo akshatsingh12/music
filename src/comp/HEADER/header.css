@@ -1,3 +1,31 @@
+.zyx {
+  position: relative;
+  display: inline-block; /* or block, depending on your layout */
+  padding: 8px 16px; /* Adjust padding as needed */
+  border: none;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.zyx::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px; /* adjust the thickness of the border as needed */
+  /* background-color: #000; adjust the color of the border as needed */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease; /* adjust the duration and easing as needed */
+  background-color: red;
+}
+
+.zyx:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .xy{
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr;

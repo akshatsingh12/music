@@ -1,5 +1,5 @@
 {
-    "homepage": "https://myusername.github.io",
+    "homepage": "https://myusername.github.io/music",
     "name": "project1",
     "version": "0.1.0",
     "private": true,
@@ -17,7 +17,7 @@
         "react": "^18.2.0",
         "react-bootstrap": "^2.9.2",
         "react-dom": "^18.2.0",
-        "react-router-dom": "^6.21.1",
+        "react-router-dom": "^6.21.3",
         "react-scripts": "5.0.1",
         "three": "^0.160.0",
         "top-loading-bar": "^7.0.7",
