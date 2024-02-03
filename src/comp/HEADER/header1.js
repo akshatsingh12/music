@@ -20,7 +20,7 @@ const Header = () => {
     <>
       <header className="text-white-600 body-font header">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <Link className="flex title-font font-medium items-center text-black-900 mb-4 md:mb-0" to='/'>
+    <Link className="flex title-font font-medium items-center text-black-900 mb-4 md:mb-0" to='/music'>
       <img className='imge' alt='no img' src='https://penji.co/wp-content/uploads/2022/02/2.-kion.jpg'/>
       <span className="ml-2 text-3xl text-white hover:text-red">Music Portal</span>
     </Link>

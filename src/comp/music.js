@@ -11,18 +11,18 @@ const Music = () => {
   // const [pa,setPa] = useState('');
   
   useEffect(()=>{
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    var requestOptions = {
-        method: "get",
-        headers: myHeaders,
-        redirect: "follow",
+    // var myHeaders = new Headers();
+    // myHeaders.append("Content-Type", "application/json");
+    // var requestOptions = {
+    //     method: "get",
+    //     headers: myHeaders,
+    //     redirect: "follow",
         
-    };
+    // };
     
-    fetch("https://v1.nocodeapi.com/bchbebd/spotify/ucEqkvLwySFvnehk/browse/categories", requestOptions)
-        .then(response => response.json())
-        .then(result => setDa(result))
+    fetch('http://localhost:5000/')
+        .then((response) => response.json())
+        .then((result) => setDa(result))
         .catch(error => console.log('error', error));
 },[])
   return (

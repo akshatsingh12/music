@@ -15,12 +15,11 @@ var requestOptions = {
     
 };
 
-fetch("https://v1.nocodeapi.com/bchbebd/spotify/ucEqkvLwySFvnehk/browse/new", requestOptions)
+fetch("https://v1.nocodeapi.com/hjvuvtfree/spotify/aXMJElbXumcpppBI/browse/new?perPage=45&page=1", requestOptions)
     .then(response => response.json())
     .then(result => setAa(result))
     .catch(error => console.log('error', error));
     },[])
-    // console.log(aa.albums.items.artists.external_urls.id);
   return (
     <>
     <Header/>
@@ -32,7 +31,6 @@ fetch("https://v1.nocodeapi.com/bchbebd/spotify/ucEqkvLwySFvnehk/browse/new", re
       <Card.Body>
         <Card.Title>{aa.name}</Card.Title>
         <Card.Text>
-         {/* {aa.artists[0].id} */}
         </Card.Text>
         <Button variant="primary" style={{backgroundColor: "blue"}}><a target="_blank" href={aa.artists[0].external_urls.spotify}>Goooooooooo</a></Button>
       </Card.Body>
